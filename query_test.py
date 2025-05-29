@@ -37,6 +37,13 @@ query_age = {"age": 25}
 age_25_users = collection.find(query_age)
 for user in age_25_users:
     print(user)
+print("\n" + "=" * 30 + "\n")
+
+print("--- 5. 正在查詢作者Jason的資料... ---")
+# 查詢剛剛插入的資料並印出
+query_author = {"作者": "Jason"}
+author_jason = collection.find_one(query_author)
+print(author_jason)
 
 # --- 關閉連線 ---
 client.close()
